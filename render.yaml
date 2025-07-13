@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: bestelltool-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+    plan: free
+    envVars:
+      - key: JWT_SECRET
+        value: geheim123
+      - key: FTP_HOST
+        value: ssh.strato.de
+      - key: FTP_USER
+        value: sftp_n8nData@domlab.de
+      - key: FTP_PASSWORD
+        value: 1PvdXQKv9CruWzv9nbPP
